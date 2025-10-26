@@ -132,7 +132,7 @@ export class IntegrationSettingsComponent {
       Mobile: '📱',
       Slack: '💬',
       Teams: '👥',
-      WhatsApp: '💚',
+      WhatsApp: '📞',
       Telegram: '✈️',
       Email: '📧',
       SMS: '💬',

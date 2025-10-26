@@ -9,7 +9,7 @@ export class AgentMockService {
     general: {
       agentName: 'Customer Support Bot',
       description: 'Intelligent assistant for customer inquiries and support',
-      avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=agent',
+      avatarUrl: 'https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan',
       primaryColor: '#3B82F6',
       language: 'English',
       timezone: 'UTC-5',
@@ -39,11 +39,7 @@ export class AgentMockService {
       },
     },
     training: {
-      knowledgeBase: [
-        'Product documentation',
-        'FAQ database',
-        'Support tickets history',
-      ],
+      knowledgeBase: ['Product documentation', 'FAQ database', 'Support tickets history'],
       faqPairs: [
         {
           question: 'How do I reset my password?',

@@ -65,26 +65,6 @@ import { ResponseSettings } from '../../models/agent.model';
             placeholder="Thank you for chatting!"
           />
         </div>
-
-        <div class="form-group">
-          <label class="form-label">Response Delay (ms)</label>
-          <input
-            type="number"
-            [value]="settings().responseDelay"
-            class="form-input"
-            min="0"
-            max="5000"
-            step="100"
-          />
-        </div>
-
-        <div class="form-group">
-          <label class="toggle-label">
-            <input type="checkbox" [checked]="settings().typingIndicator" class="toggle-input" />
-            <span class="toggle-slider"></span>
-            <span class="toggle-text">Show Typing Indicator</span>
-          </label>
-        </div>
       </div>
     </section>
   `,
