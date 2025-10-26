@@ -5,6 +5,7 @@ import { BehaviorSettings } from '../../models/agent.model';
 @Component({
   selector: 'app-behavior-settings',
   imports: [CommonModule],
+  styleUrl: './behavior-settings.component.scss',
   template: `
     <section id="behavior" class="form-section">
       <div class="section-header">
@@ -74,11 +75,7 @@ import { BehaviorSettings } from '../../models/agent.model';
 
         <div class="form-group">
           <label class="toggle-label">
-            <input
-              type="checkbox"
-              [checked]="settings().proactiveMessages"
-              class="toggle-input"
-            />
+            <input type="checkbox" [checked]="settings().proactiveMessages" class="toggle-input" />
             <span class="toggle-slider"></span>
             <span class="toggle-text">Enable Proactive Messages</span>
           </label>
@@ -87,65 +84,6 @@ import { BehaviorSettings } from '../../models/agent.model';
       </div>
     </section>
   `,
-  styles: [`
-    @import 'tailwindcss' reference;
-
-    .slider-container {
-      @apply flex items-center gap-4;
-    }
-
-    .slider {
-      @apply flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
-      @apply hover:bg-gray-300 transition-colors duration-200;
-
-      &::-webkit-slider-thumb {
-        @apply appearance-none w-5 h-5 bg-blue-600 rounded-full cursor-pointer;
-        @apply hover:bg-blue-700 transition-colors duration-200;
-      }
-
-      &::-moz-range-thumb {
-        @apply w-5 h-5 bg-blue-600 rounded-full cursor-pointer border-0;
-        @apply hover:bg-blue-700 transition-colors duration-200;
-      }
-    }
-
-    .slider-value {
-      @apply min-w-24 text-sm font-semibold text-gray-700;
-    }
-
-    .toggle-label {
-      @apply flex items-center gap-3 cursor-pointer;
-    }
-
-    .toggle-input {
-      @apply sr-only;
-
-      &:checked + .toggle-slider {
-        @apply bg-blue-600;
-
-        &::before {
-          @apply translate-x-6;
-        }
-      }
-    }
-
-    .toggle-slider {
-      @apply relative w-12 h-6 bg-gray-300 rounded-full transition-colors duration-200;
-
-      &::before {
-        content: '';
-        @apply absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200;
-      }
-    }
-
-    .toggle-text {
-      @apply text-sm font-medium text-gray-700;
-    }
-
-    .form-hint {
-      @apply text-xs text-gray-500 mt-1;
-    }
-  `],
 })
 export class BehaviorSettingsComponent {
   settings = input.required<BehaviorSettings>();

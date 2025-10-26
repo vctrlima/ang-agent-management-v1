@@ -5,6 +5,7 @@ import { ResponseSettings } from '../../models/agent.model';
 @Component({
   selector: 'app-response-settings',
   imports: [CommonModule],
+  styleUrl: './response-settings.component.scss',
   template: `
     <section id="responses" class="form-section">
       <div class="section-header">
@@ -79,11 +80,7 @@ import { ResponseSettings } from '../../models/agent.model';
 
         <div class="form-group">
           <label class="toggle-label">
-            <input
-              type="checkbox"
-              [checked]="settings().typingIndicator"
-              class="toggle-input"
-            />
+            <input type="checkbox" [checked]="settings().typingIndicator" class="toggle-input" />
             <span class="toggle-slider"></span>
             <span class="toggle-text">Show Typing Indicator</span>
           </label>
@@ -91,17 +88,6 @@ import { ResponseSettings } from '../../models/agent.model';
       </div>
     </section>
   `,
-  styles: [`
-    @import 'tailwindcss' reference;
-
-    .label-icon {
-      @apply text-lg mr-2;
-    }
-
-    .form-label {
-      @apply flex items-center;
-    }
-  `],
 })
 export class ResponseSettingsComponent {
   settings = input.required<ResponseSettings>();
