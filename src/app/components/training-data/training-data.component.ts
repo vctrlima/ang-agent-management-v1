@@ -100,7 +100,7 @@ import { TrainingData } from '../../models/agent.model';
     </section>
   `,
   styles: [`
-    @import './general-settings/general-settings.component.scss';
+    @import 'tailwindcss' reference;
 
     .tag-list {
       @apply flex flex-wrap gap-2;

@@ -86,7 +86,7 @@ import { IntegrationSettings } from '../../models/agent.model';
     </section>
   `,
   styles: [`
-    @import './general-settings/general-settings.component.scss';
+    @import 'tailwindcss' reference;
 
     .channel-grid {
       @apply grid grid-cols-2 md:grid-cols-4 gap-3;

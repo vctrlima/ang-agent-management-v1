@@ -1,3 +1,5 @@
+@use 'tailwindcss';
+
 .preview-panel {
   @apply h-full flex flex-col bg-gray-50 border-l border-gray-200 overflow-y-auto;
 }
@@ -61,7 +63,8 @@
 }
 
 .message {
-  @apply flex gap-2 items-start animate-fade-in;
+  @apply flex gap-2 items-start;
+  animation: fade-in 0.3s ease-out;
 }
 
 .bot-message {
@@ -91,7 +94,8 @@
 }
 
 .typing-indicator {
-  @apply flex gap-2 items-center animate-fade-in;
+  @apply flex gap-2 items-center;
+  animation: fade-in 0.3s ease-out;
 }
 
 .typing-dots {
@@ -173,8 +177,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.3s ease-out;
 }

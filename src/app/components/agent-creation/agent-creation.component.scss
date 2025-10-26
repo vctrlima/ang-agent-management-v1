@@ -1,3 +1,5 @@
+@use 'tailwindcss';
+
 .agent-creation-layout {
   @apply min-h-screen flex bg-gray-50;
 }

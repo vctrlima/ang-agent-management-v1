@@ -1,3 +1,5 @@
+@use 'tailwindcss';
+
 .sidebar-nav {
   @apply h-full flex flex-col bg-white border-r border-gray-200 overflow-y-auto;
   @apply shadow-lg;
@@ -28,7 +30,7 @@
   @apply text-gray-700 font-medium transition-all duration-200;
   @apply hover:bg-blue-50 hover:text-blue-600;
   @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-  @apply relative group;
+  @apply relative;
 
   &.active {
     @apply bg-blue-100 text-blue-700 shadow-sm;
@@ -44,7 +46,11 @@
 }
 
 .nav-icon {
-  @apply text-2xl mr-3 transition-transform duration-200 group-hover:scale-110;
+  @apply text-2xl mr-3 transition-transform duration-200;
+}
+
+.nav-button:hover .nav-icon {
+  @apply scale-110;
 }
 
 .nav-label {

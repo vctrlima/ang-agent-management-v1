@@ -92,8 +92,7 @@ import { ResponseSettings } from '../../models/agent.model';
     </section>
   `,
   styles: [`
-    @import './general-settings/general-settings.component.scss';
-    @import './behavior-settings/behavior-settings.component';
+    @import 'tailwindcss' reference;
 
     .label-icon {
       @apply text-lg mr-2;

@@ -88,7 +88,7 @@ import { BehaviorSettings } from '../../models/agent.model';
     </section>
   `,
   styles: [`
-    @import './general-settings/general-settings.component.scss';
+    @import 'tailwindcss' reference;
 
     .slider-container {
       @apply flex items-center gap-4;
