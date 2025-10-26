@@ -1,13 +1,13 @@
-import { Component, computed, signal, ViewChild, ElementRef, afterNextRender } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarNavigationComponent } from '../sidebar-navigation/sidebar-navigation.component';
-import { GeneralSettingsComponent } from '../general-settings/general-settings.component';
-import { BehaviorSettingsComponent } from '../behavior-settings/behavior-settings.component';
-import { ResponseSettingsComponent } from '../response-settings/response-settings.component';
-import { IntegrationSettingsComponent } from '../integration-settings/integration-settings.component';
-import { TrainingDataComponent } from '../training-data/training-data.component';
-import { PreviewPanelComponent } from '../preview-panel/preview-panel.component';
+import { afterNextRender, Component, signal } from '@angular/core';
 import { AgentMockService } from '../../services/agent-mock.service';
+import { BehaviorSettingsComponent } from '../behavior-settings/behavior-settings.component';
+import { GeneralSettingsComponent } from '../general-settings/general-settings.component';
+import { IntegrationSettingsComponent } from '../integration-settings/integration-settings.component';
+import { PreviewPanelComponent } from '../preview-panel/preview-panel.component';
+import { ResponseSettingsComponent } from '../response-settings/response-settings.component';
+import { SidebarNavigationComponent } from '../sidebar-navigation/sidebar-navigation.component';
+import { TrainingDataComponent } from '../training-data/training-data.component';
 
 @Component({
   selector: 'app-agent-creation',

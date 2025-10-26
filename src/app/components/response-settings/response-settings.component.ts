@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { ResponseSettings } from '../../models/agent.model';
 
 @Component({

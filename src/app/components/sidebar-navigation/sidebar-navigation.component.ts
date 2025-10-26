@@ -1,5 +1,5 @@
-import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input, output } from '@angular/core';
 import { NavigationSection } from '../../models/agent.model';
 
 @Component({

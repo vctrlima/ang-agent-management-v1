@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { AgentConfig } from '../../models/agent.model';
 
 @Component({
@@ -14,7 +14,10 @@ export class PreviewPanelComponent {
   readonly sampleMessages = [
     { type: 'bot', text: '', isGreeting: true },
     { type: 'user', text: 'How do I reset my password?' },
-    { type: 'bot', text: 'You can reset your password by clicking "Forgot Password" on the login page.' },
+    {
+      type: 'bot',
+      text: 'You can reset your password by clicking "Forgot Password" on the login page.',
+    },
     { type: 'user', text: 'Thanks!' },
     { type: 'bot', text: '', isEnd: true },
   ];

@@ -20,65 +20,70 @@
         </div>
         <button type="button" class="chat-close-btn">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
 
       <div class="chat-messages">
-        @for (message of sampleMessages; track $index) {
-          @if (message.isGreeting) {
-            <div class="message bot-message">
-              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
-              <div class="message-bubble">
-                {{ getGreetingMessage() }}
-              </div>
-            </div>
-          } @else if (message.isEnd) {
-            <div class="message bot-message">
-              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
-              <div class="message-bubble">
-                {{ getEndMessage() }}
-              </div>
-            </div>
-          } @else if (message.type === 'bot') {
-            <div class="message bot-message">
-              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
-              <div class="message-bubble">
-                {{ message.text }}
-              </div>
-            </div>
-          } @else {
-            <div class="message user-message">
-              <div class="message-bubble">
-                {{ message.text }}
-              </div>
-            </div>
-          }
-        }
-
-        @if (config().responses.typingIndicator) {
-          <div class="typing-indicator">
-            <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
-            <div class="typing-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        @for (message of sampleMessages; track $index) { @if (message.isGreeting) {
+        <div class="message bot-message">
+          <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+          <div class="message-bubble">
+            {{ getGreetingMessage() }}
           </div>
+        </div>
+        } @else if (message.isEnd) {
+        <div class="message bot-message">
+          <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+          <div class="message-bubble">
+            {{ getEndMessage() }}
+          </div>
+        </div>
+        } @else if (message.type === 'bot') {
+        <div class="message bot-message">
+          <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+          <div class="message-bubble">
+            {{ message.text }}
+          </div>
+        </div>
+        } @else {
+        <div class="message user-message">
+          <div class="message-bubble">
+            {{ message.text }}
+          </div>
+        </div>
+        } } @if (config().responses.typingIndicator) {
+        <div class="typing-indicator">
+          <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+          <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         }
       </div>
 
       <div class="chat-input-area">
-        <input
-          type="text"
-          class="chat-input"
-          placeholder="Type your message..."
-          disabled
-        />
-        <button type="button" class="chat-send-btn" [style.background-color]="config().general.primaryColor">
+        <input type="text" class="chat-input" placeholder="Type your message..." disabled />
+        <button
+          type="button"
+          class="chat-send-btn"
+          [style.background-color]="config().general.primaryColor"
+        >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+            />
           </svg>
         </button>
       </div>
@@ -111,7 +116,7 @@
   <div class="preview-footer">
     <button type="button" class="publish-btn">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
       </svg>
       Publish Agent
     </button>
