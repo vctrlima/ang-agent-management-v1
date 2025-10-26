@@ -1,0 +1,119 @@
+<div class="preview-panel">
+  <div class="preview-header">
+    <h3 class="preview-title">Live Preview</h3>
+    <p class="preview-subtitle">See how your agent will look</p>
+  </div>
+
+  <div class="preview-body">
+    <!-- Chat Widget Preview -->
+    <div class="chat-widget">
+      <div class="chat-header" [style.background-color]="config().general.primaryColor">
+        <div class="chat-header-content">
+          <img [src]="config().general.avatarUrl" alt="Agent" class="chat-avatar" />
+          <div class="chat-info">
+            <h4 class="chat-agent-name">{{ config().general.agentName }}</h4>
+            <span class="chat-status">
+              <span class="status-indicator"></span>
+              Online
+            </span>
+          </div>
+        </div>
+        <button type="button" class="chat-close-btn">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-messages">
+        @for (message of sampleMessages; track $index) {
+          @if (message.isGreeting) {
+            <div class="message bot-message">
+              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+              <div class="message-bubble">
+                {{ getGreetingMessage() }}
+              </div>
+            </div>
+          } @else if (message.isEnd) {
+            <div class="message bot-message">
+              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+              <div class="message-bubble">
+                {{ getEndMessage() }}
+              </div>
+            </div>
+          } @else if (message.type === 'bot') {
+            <div class="message bot-message">
+              <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+              <div class="message-bubble">
+                {{ message.text }}
+              </div>
+            </div>
+          } @else {
+            <div class="message user-message">
+              <div class="message-bubble">
+                {{ message.text }}
+              </div>
+            </div>
+          }
+        }
+
+        @if (config().responses.typingIndicator) {
+          <div class="typing-indicator">
+            <img [src]="config().general.avatarUrl" alt="Bot" class="message-avatar" />
+            <div class="typing-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          class="chat-input"
+          placeholder="Type your message..."
+          disabled
+        />
+        <button type="button" class="chat-send-btn" [style.background-color]="config().general.primaryColor">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Configuration Summary -->
+    <div class="config-summary">
+      <h4 class="summary-title">Configuration Summary</h4>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="summary-label">Personality:</span>
+          <span class="summary-value">{{ config().behavior.personality }}</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Response Style:</span>
+          <span class="summary-value">{{ config().behavior.responseStyle }}</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Language:</span>
+          <span class="summary-value">{{ config().general.language }}</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Channels:</span>
+          <span class="summary-value">{{ config().integrations.enabledChannels.join(', ') }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-footer">
+    <button type="button" class="publish-btn">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+      Publish Agent
+    </button>
+  </div>
+</div>

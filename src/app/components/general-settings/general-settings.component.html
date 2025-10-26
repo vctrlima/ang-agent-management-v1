@@ -1,0 +1,80 @@
+<section id="general" class="form-section">
+  <div class="section-header">
+    <h2 class="section-title">General Settings</h2>
+    <p class="section-description">Configure basic information about your chatbot agent</p>
+  </div>
+
+  <div class="form-grid">
+    <div class="form-group col-span-2">
+      <label class="form-label">Agent Name</label>
+      <input
+        type="text"
+        [value]="settings().agentName"
+        class="form-input"
+        placeholder="Enter agent name"
+      />
+    </div>
+
+    <div class="form-group col-span-2">
+      <label class="form-label">Description</label>
+      <textarea
+        [value]="settings().description"
+        class="form-textarea"
+        rows="3"
+        placeholder="Describe your agent's purpose"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Avatar</label>
+      <div class="avatar-upload">
+        <img [src]="settings().avatarUrl" alt="Agent avatar" class="avatar-preview" />
+        <button type="button" class="upload-btn">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          Change Avatar
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Primary Color</label>
+      <div class="color-picker">
+        <input
+          type="color"
+          [value]="settings().primaryColor"
+          class="color-input"
+        />
+        <input
+          type="text"
+          [value]="settings().primaryColor"
+          class="form-input"
+          placeholder="#3B82F6"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Language</label>
+      <select [value]="settings().language" class="form-select">
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Portuguese">Portuguese</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Timezone</label>
+      <select [value]="settings().timezone" class="form-select">
+        <option value="UTC-5">UTC-5 (Eastern)</option>
+        <option value="UTC-6">UTC-6 (Central)</option>
+        <option value="UTC-7">UTC-7 (Mountain)</option>
+        <option value="UTC-8">UTC-8 (Pacific)</option>
+        <option value="UTC+0">UTC+0 (GMT)</option>
+      </select>
+    </div>
+  </div>
+</section>

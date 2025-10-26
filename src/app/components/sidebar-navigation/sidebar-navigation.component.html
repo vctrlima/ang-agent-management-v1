@@ -1,0 +1,32 @@
+<nav class="sidebar-nav">
+  <div class="sidebar-header">
+    <h2 class="sidebar-title">Agent Configuration</h2>
+    <p class="sidebar-subtitle">Configure your chatbot settings</p>
+  </div>
+
+  <ul class="nav-list">
+    @for (section of sections(); track section.id) {
+      <li class="nav-item">
+        <button
+          type="button"
+          (click)="onSectionClick(section.id)"
+          [class.active]="activeSection() === section.id"
+          class="nav-button"
+        >
+          <span class="nav-icon">{{ section.icon }}</span>
+          <span class="nav-label">{{ section.label }}</span>
+          <span class="nav-indicator"></span>
+        </button>
+      </li>
+    }
+  </ul>
+
+  <div class="sidebar-footer">
+    <button type="button" class="save-draft-btn">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+      </svg>
+      Save Draft
+    </button>
+  </div>
+</nav>

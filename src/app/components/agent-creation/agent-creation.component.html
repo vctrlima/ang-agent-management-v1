@@ -1,0 +1,35 @@
+<div class="agent-creation-layout">
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <app-sidebar-navigation
+      [sections]="navigationSections"
+      [activeSection]="activeSection()"
+      (sectionClick)="onSectionClick($event)"
+    />
+  </aside>
+
+  <!-- Main Form Area -->
+  <main class="form-container">
+    <div class="form-wrapper">
+      <header class="page-header">
+        <h1 class="page-title">Create New Agent</h1>
+        <p class="page-description">
+          Configure your intelligent chatbot agent with custom settings and training data
+        </p>
+      </header>
+
+      <div class="form-sections">
+        <app-general-settings [settings]="agentConfig().general" />
+        <app-behavior-settings [settings]="agentConfig().behavior" />
+        <app-response-settings [settings]="agentConfig().responses" />
+        <app-integration-settings [settings]="agentConfig().integrations" />
+        <app-training-data [data]="agentConfig().training" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Right Preview Panel -->
+  <aside class="preview-sidebar">
+    <app-preview-panel [config]="agentConfig()" />
+  </aside>
+</div>
