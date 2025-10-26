@@ -45,8 +45,9 @@ import { IntegrationSettings } from '../../models/agent.model';
             <input
               type="url"
               [value]="settings().webhookUrl"
-              class="form-input pl-10"
+              class="form-input"
               placeholder="https://api.example.com/webhook"
+              [ngStyle]="{ 'padding-left': '38px' }"
             />
           </div>
         </div>
@@ -65,8 +66,9 @@ import { IntegrationSettings } from '../../models/agent.model';
             <input
               type="password"
               [value]="settings().apiKey"
-              class="form-input pl-10"
+              class="form-input"
               placeholder="Enter API key"
+              [ngStyle]="{ 'padding-left': '38px' }"
             />
           </div>
         </div>
