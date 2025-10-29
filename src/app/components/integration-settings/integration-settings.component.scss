@@ -39,7 +39,7 @@
 .form-textarea {
   @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg;
   @apply text-gray-900 placeholder-gray-400;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
   @apply transition-all duration-200;
 
   &:hover {
@@ -68,10 +68,10 @@
 .channel-card {
   @apply flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-lg;
   @apply cursor-pointer transition-all duration-200;
-  @apply hover:border-blue-300 hover:bg-blue-50;
+  @apply hover:border-red-300 hover:bg-red-50;
 
   &.selected {
-    @apply border-blue-500 bg-blue-50;
+    @apply border-red-500 bg-red-50;
 
     .channel-icon {
       @apply scale-110;
@@ -113,8 +113,8 @@
 }
 
 .add-header-btn {
-  @apply flex items-center gap-2 px-4 py-2 text-blue-600 border-2 border-dashed border-blue-300;
-  @apply rounded-lg hover:bg-blue-50 transition-all duration-200;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
+  @apply flex items-center gap-2 px-4 py-2 text-red-600 border-2 border-dashed border-red-300;
+  @apply rounded-lg hover:bg-red-50 transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500;
   @apply font-medium text-sm;
 }

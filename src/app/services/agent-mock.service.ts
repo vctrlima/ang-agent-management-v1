@@ -10,7 +10,7 @@ export class AgentMockService {
       agentName: 'Customer Support Bot',
       description: 'Intelligent assistant for customer inquiries and support',
       avatarUrl: 'https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan',
-      primaryColor: '#3B82F6',
+      primaryColor: '#cc0000',
       language: 'English',
       timezone: 'UTC-5',
     },

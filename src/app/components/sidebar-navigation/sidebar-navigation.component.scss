@@ -28,12 +28,12 @@
 .nav-button {
   @apply w-full flex items-center px-4 py-3 text-left rounded-lg;
   @apply text-gray-700 font-medium transition-all duration-200;
-  @apply hover:bg-blue-50 hover:text-blue-600;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  @apply hover:bg-red-50 hover:text-red-600;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   @apply relative;
 
   &.active {
-    @apply bg-blue-100 text-blue-700 shadow-sm;
+    @apply bg-red-100 text-red-700 shadow-sm;
 
     .nav-indicator {
       @apply opacity-100 scale-100;
@@ -58,7 +58,7 @@
 }
 
 .nav-indicator {
-  @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-blue-600 rounded-r;
+  @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-red-600 rounded-r;
   @apply opacity-0 scale-y-0 transition-all duration-200;
 }
 

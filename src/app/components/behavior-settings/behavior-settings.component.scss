@@ -39,7 +39,7 @@
 .form-textarea {
   @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg;
   @apply text-gray-900 placeholder-gray-400;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
   @apply transition-all duration-200;
 
   &:hover {
@@ -70,13 +70,13 @@
   @apply hover:bg-gray-300 transition-colors duration-200;
 
   &::-webkit-slider-thumb {
-    @apply appearance-none w-5 h-5 bg-blue-600 rounded-full cursor-pointer;
-    @apply hover:bg-blue-700 transition-colors duration-200;
+    @apply appearance-none w-5 h-5 bg-red-600 rounded-full cursor-pointer;
+    @apply hover:bg-red-700 transition-colors duration-200;
   }
 
   &::-moz-range-thumb {
-    @apply w-5 h-5 bg-blue-600 rounded-full cursor-pointer border-0;
-    @apply hover:bg-blue-700 transition-colors duration-200;
+    @apply w-5 h-5 bg-red-600 rounded-full cursor-pointer border-0;
+    @apply hover:bg-red-700 transition-colors duration-200;
   }
 }
 
@@ -92,7 +92,7 @@
   @apply sr-only;
 
   &:checked + .toggle-slider {
-    @apply bg-blue-600;
+    @apply bg-red-600;
 
     &::before {
       @apply translate-x-6;

@@ -39,7 +39,7 @@
 .form-textarea {
   @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg;
   @apply text-gray-900 placeholder-gray-400;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
   @apply transition-all duration-200;
 
   &:hover {
@@ -66,7 +66,7 @@
 }
 
 .tag {
-  @apply inline-flex items-center gap-2 px-3 py-1.5 bg-blue-100 text-blue-700;
+  @apply inline-flex items-center gap-2 px-3 py-1.5 bg-red-100 text-red-700;
   @apply rounded-full text-sm font-medium;
 }
 
@@ -80,8 +80,8 @@
 }
 
 .add-tag-btn {
-  @apply px-3 py-1.5 text-sm font-medium text-blue-600 border-2 border-dashed border-blue-300;
-  @apply rounded-full hover:bg-blue-50 transition-all duration-200;
+  @apply px-3 py-1.5 text-sm font-medium text-red-600 border-2 border-dashed border-red-300;
+  @apply rounded-full hover:bg-red-50 transition-all duration-200;
 }
 
 .add-tag-btn-sm {
@@ -96,7 +96,7 @@
 
 .faq-item {
   @apply relative p-4 border-2 border-gray-200 rounded-lg;
-  @apply hover:border-blue-300 transition-colors duration-200;
+  @apply hover:border-red-300 transition-colors duration-200;
 }
 
 .faq-header,
@@ -109,13 +109,13 @@
 }
 
 .faq-badge {
-  @apply flex items-center justify-center w-8 h-8 bg-blue-600 text-white;
+  @apply flex items-center justify-center w-8 h-8 bg-red-600 text-white;
   @apply rounded-full font-bold text-sm flex-shrink-0;
 }
 
 .intent-item {
   @apply p-4 border-2 border-gray-200 rounded-lg space-y-3;
-  @apply hover:border-blue-300 transition-colors duration-200;
+  @apply hover:border-red-300 transition-colors duration-200;
 }
 
 .intent-header {
@@ -138,6 +138,6 @@
 .add-faq-btn,
 .add-intent-btn {
   @apply w-full flex items-center justify-center gap-2 px-4 py-3;
-  @apply text-blue-600 border-2 border-dashed border-blue-300 rounded-lg;
-  @apply hover:bg-blue-50 transition-all duration-200 font-medium;
+  @apply text-red-600 border-2 border-dashed border-red-300 rounded-lg;
+  @apply hover:bg-red-50 transition-all duration-200 font-medium;
 }

@@ -79,7 +79,7 @@
   @apply justify-end;
 
   .message-bubble {
-    @apply bg-blue-600 text-white;
+    @apply bg-red-600 text-white;
   }
 }
 
@@ -121,7 +121,7 @@
 .chat-input {
   @apply flex-1 px-4 py-2 border border-gray-300 rounded-full;
   @apply text-sm placeholder-gray-400;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500;
   @apply disabled:bg-gray-100 disabled:cursor-not-allowed;
 }
 
@@ -162,9 +162,9 @@
 
 .publish-btn {
   @apply w-full flex items-center justify-center gap-2 px-6 py-3;
-  @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg;
-  @apply hover:from-blue-700 hover:to-blue-800 transition-all duration-200;
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  @apply bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-lg;
+  @apply hover:from-red-700 hover:to-red-800 transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   @apply active:transform active:scale-95;
   @apply shadow-lg hover:shadow-xl;
 }
